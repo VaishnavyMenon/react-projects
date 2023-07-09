@@ -1,0 +1,79 @@
+.content-main{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1230px;
+    max-height: 615px;
+    margin: 80px auto;
+    align-items: center;
+}
+
+.content-body{
+    display: flex;
+    flex-direction: column;
+    max-width: 595px;
+    gap: 36px;
+}
+
+.content-body h1{
+    font-size: 108px;
+    font-weight: 800;
+    line-height: 102px;
+}
+
+.upper-para{
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #5A5959;
+}
+
+.lower-para{
+    font-size:14px;
+    color: #5A5959;
+}
+
+.content-image img{
+    width: 525px;
+    height: 487px;
+}
+
+.buttons{
+    display: flex;
+    gap: 40px;
+}
+
+button{
+    all:unset;
+    height: 41px;
+    padding: 6px 16px;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.btn-true{
+    background-color: #d01c28;
+    color: #ffffff;
+}
+
+.btn-false{
+    color: #5A5959;
+    border: 1px solid #5A5959;
+}
+
+.shop-icons{
+    display: flex;
+    gap:16px;
+}
+
+.shop-icon{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.shopping{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
