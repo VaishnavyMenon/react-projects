@@ -1,0 +1,17 @@
+.contact_header{
+    max-width: 975px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  h1{
+    font-weight: 800;
+    font-size: 48px;
+  }
+
+  p {
+    max-width: 975px;
+    font-size: 16px;
+    font-weight: 600;
+  }
