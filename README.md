@@ -25,6 +25,7 @@ series of React practice projects
    -- Responsive Food Menu App
 
    ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/6f449958-9827-467a-acce-fcf881f78e87)
-   ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/88741767-c969-49f4-9218-63c3580b5ae7)
+
+   ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/aac943e2-61d1-4c4c-844e-a7089e58ff6e)
 
 
