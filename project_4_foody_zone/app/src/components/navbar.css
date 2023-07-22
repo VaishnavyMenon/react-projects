@@ -1,0 +1,9 @@
+.test {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 0;
+  }
