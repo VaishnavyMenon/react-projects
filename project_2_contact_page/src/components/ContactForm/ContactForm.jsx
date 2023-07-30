@@ -12,7 +12,6 @@ const ContactForm = () => {
 
   const onSubmitHandle = (event) => {
       event.preventDefault();
-      console.log(event)
       setName(event.target[0].value)
       setEmail(event.target[1].value)
       setMessage(event.target[2].value)

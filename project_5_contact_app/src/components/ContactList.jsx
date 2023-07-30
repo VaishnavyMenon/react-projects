@@ -1,10 +1,12 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
+import EmptyState from "./EmptyState";
 
-const ContactList = ({ handleOption, theme, contacts }) => {
-  
+const ContactList = ({ handleOption, theme, contacts, setUpdate, onOpen }) => {
+  const isEmpty = contacts? contacts.length===0? 1 : 0 : 1
   return (
     <div className="mt-[35px] overflow-scroll max-h-[calc(100vh-250px)] overflow-x-hidden">
-      {contacts?.map(({ name, email, phone, id }) => (
+    {isEmpty? (<EmptyState theme={theme} setUpdate={setUpdate} onOpen={onOpen}/>):   
+    (contacts?.map(({ name, email, phone, id }) => (
         <div
           key={id}
           className={`flex gap-[80px] items-center w-[320px] border-b-2 ${
@@ -34,7 +36,7 @@ const ContactList = ({ handleOption, theme, contacts }) => {
             />
           </div>
         </div>
-      ))}
+      )))}
     </div>
   );
 };

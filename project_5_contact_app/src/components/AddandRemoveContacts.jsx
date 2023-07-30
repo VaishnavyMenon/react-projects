@@ -17,7 +17,6 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
   }
 
   const updateContact = async (contact, id) => {
-    console.log(contact, id, "contact")
     try {
         const contactRef = doc(db, "contacts", id)
         await updateDoc(contactRef, contact)
@@ -30,7 +29,6 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
   return (
     <div>
       <Modal theme={theme} isOpen={isOpen} onOpen={onOpen} onClose={onClose} isUpdate={isUpdate}>
-      {console.log(isUpdate, contactDetail)}
         <Formik
           initialValues={isUpdate? {
             name: contactDetail.name,
@@ -42,7 +40,6 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
             phone: "",
           }}
           onSubmit={(values) => {
-            console.log(values);
             isUpdate? updateContact(values, contactDetail.id) : addContact(values);
           }}
         >

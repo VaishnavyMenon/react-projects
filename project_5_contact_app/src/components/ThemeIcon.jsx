@@ -1,7 +1,6 @@
 const ThemeIcon = ({ theme, setTheme }) => {
   const handleTheme = () => {
     setTheme((prev)=>(!prev))
-    console.log(theme, "theme")
   }
   return (
     <div

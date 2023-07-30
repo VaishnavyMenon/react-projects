@@ -6,7 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      "title-color": "#3D3D3D"
     },
   },
   plugins: [],

@@ -4,8 +4,8 @@ const Options = ({ theme, isOpen, onClose, handleDelete, setUpdate, onOpen }) =>
 
   const onEdit = () => {
     onClose();
-    onOpen()
-    setUpdate(true)
+    onOpen();
+    setUpdate(true);
   }
 
   return createPortal(

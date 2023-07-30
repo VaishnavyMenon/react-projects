@@ -10,7 +10,7 @@ import AddandRemoveContacts from "./components/AddandRemoveContacts";
 
 const App = () => {
   const [theme, setTheme] = useState(1); //1-> light, 0-> dark
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState();
   const [filteredData, setFilteredData] = useState();
 
   const [isOpen, setOpen] = useState(false);
@@ -47,7 +47,6 @@ const App = () => {
     const searchResults = contacts.filter((contact) =>
       contact.name.toLowerCase().includes(searchText.toLowerCase())
     );
-    console.log(searchResults);
     setFilteredData(searchResults);
   };
 
@@ -67,7 +66,7 @@ const App = () => {
         const contactRef = collection(db, "contacts");
 
         onSnapshot(contactRef, (snapshot) => {
-          const contactList = snapshot.docs.map((doc) => {
+          const contactList =  snapshot.docs.map((doc) => {
             return { id: doc.id, ...doc.data() };
           });
           setContacts(contactList);
@@ -95,7 +94,8 @@ const App = () => {
             theme={theme}
             contacts={filteredData}
             handleOption={handleOption}
-
+            setUpdate={setUpdate}
+            onOpen={onOpen}
           />
         </div>
         <ThemeIcon
