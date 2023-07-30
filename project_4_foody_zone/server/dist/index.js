@@ -45,14 +45,14 @@ app.get("/", (req, res) => {
         {
             name: "BURGER",
             price: 23,
-            text: "burger with sinfully oozing cheesy patty and Flame Grilled Chicken patty, loaded with Roasted Chipotle sauce, shredded Onions, Jalapenos & lettuce, layered between freshly toasted Buns.",
+            text: "Burger with sinfully oozing cheesy patty and Flame Grilled Chicken patty, loaded with Roasted Chipotle sauce, shredded Onions, Jalapenos & lettuce, layered between freshly toasted Buns.",
             image: "/images/burger.png",
             type: "lunch",
         },
         {
             name: "PANCAKE",
             price: 25,
-            text: "flat cake prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter.",
+            text: "Flat cake prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter.",
             image: "/images/pancake.png",
             type: "dinner",
         },

@@ -11,12 +11,14 @@ const Body = styled.section`
 `;
 
 const CardContainer = styled.div`
+  max-width:1200px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 32px;
   column-gap: 20px;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   padding-top: 64px;
 `;
 
