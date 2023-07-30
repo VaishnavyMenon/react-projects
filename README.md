@@ -1,4 +1,4 @@
-# react_mini_projects
+# React Project Series
 series of React practice projects
 
 1. Brand home page
