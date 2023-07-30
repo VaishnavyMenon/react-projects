@@ -29,4 +29,9 @@ series of React practice projects
    ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/5544f94e-02ee-4a32-b937-7679113603dd)
 
 
+5. Contact App
+   -- CRUD app to add, delete and update contacts
 
+   ![TV - 1](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/0afd85bb-8f07-4508-b7d5-efc6cf40362c)
+
+   
