@@ -7,7 +7,7 @@ const Modal = ({ theme, isOpen, onClose, children, isUpdate }) => {
       {isOpen && (
         <>
           <div
-            className={`absolute top-[calc(100vh-75%)] mx-[38px] z-50 min-w-[320px] max-h-[390px] min-h-[390px] ${
+            className={`absolute top-[calc(100vh-75%)] mx-[38px] z-50 min-w-[320px] max-h-fit min-h-[390px] ${
               theme ? "bg-white" : "bg-[#3c3c3c]"
             } rounded-[20px] py-6`}
           >

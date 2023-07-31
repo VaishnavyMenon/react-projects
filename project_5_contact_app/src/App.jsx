@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 import ContactList from "./components/ContactList";
 import ThemeIcon from "./components/ThemeIcon";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./index.css";
 import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { db } from "./config/firebase";
@@ -55,6 +57,7 @@ const App = () => {
     try {
       await deleteDoc(doc(db, "contacts", id))
       setOptionOpen(false);
+      toast.success("Contact Deleted Successfully")
     } catch (error) {
       console.log(error)
     }
@@ -120,6 +123,7 @@ const App = () => {
         handleDelete={handleDelete}
         setUpdate={setUpdate}
       />
+      <ToastContainer position="bottom-center" theme={`${theme? "light" : "dark"}`} className={`rounded-[40px] p-[15px]`}/>
     </>
   );
 };

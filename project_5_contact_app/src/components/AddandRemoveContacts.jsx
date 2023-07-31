@@ -1,7 +1,15 @@
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import Modal from "./Modal";
-import { Field, Formik, Form } from "formik";
+import { ErrorMessage, Field, Formik, Form } from "formik";
 import { db } from "../config/firebase";
+import { toast } from 'react-toastify';
+import * as Yup from "yup"
+
+const contactSchemaValidator = Yup.object().shape({
+  name: Yup.string().required("Name is required"),
+  email: Yup.string().email("Invalid Email").required("Email is required"),
+  phone: Yup.number().required("Phone is required"),
+});
 
 const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contactDetail }) => {
   const fields = ["Name", "Email", "Phone"];
@@ -10,6 +18,7 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
     try {
         const contactRef = collection(db, "contacts")
         await addDoc(contactRef, contact)
+        toast.success("Contact Added Successfully")
     } catch (error) {
         console.log(error)
     } 
@@ -20,6 +29,7 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
     try {
         const contactRef = doc(db, "contacts", id)
         await updateDoc(contactRef, contact)
+        toast.success("Contact Updated Successfully")
     } catch (error) {
         console.log(error)
     } 
@@ -30,6 +40,7 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
     <div>
       <Modal theme={theme} isOpen={isOpen} onOpen={onOpen} onClose={onClose} isUpdate={isUpdate}>
         <Formik
+          validationSchema={contactSchemaValidator}
           initialValues={isUpdate? {
             name: contactDetail.name,
             email: contactDetail.email,
@@ -60,6 +71,9 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
                       : "text-white border-white"
                   }}`}
                 />
+                <div className={`text-red-500 text-[14px]`}>
+                  <ErrorMessage name={`${field.toLowerCase()}`}/>
+                </div>
               </div>
             ))}
 
