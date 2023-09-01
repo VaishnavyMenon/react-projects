@@ -38,8 +38,6 @@ const PortfolioSection = () => {
         base: "column",
         xl: "row",
       }}
-      maxW="1000px"
-      minW="468px"
       align={{
         base: "flex-start",
         xl: "center",

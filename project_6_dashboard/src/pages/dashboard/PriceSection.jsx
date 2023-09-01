@@ -11,11 +11,23 @@ const PriceSection = () => {
       <HStack justify="space-between" align="start">
         <Stack gap="10px">
           <Text textStyle="h5">Current Price</Text>
-          <HStack gap="8px" align="center">
+          <HStack gap={{
+            base:"2px",
+            md:"8px"
+          }} align="center">
             <Text textStyle="h1">₹26,670.25</Text>
-            <HStack gap="2px">
-              <Icon as={BsArrowUpRight} fontSize="12px" color="#059669" />
-              <Text fontSize="14px" color="#059669" fontWeight="bold">
+            <HStack gap={{
+              base:"2px",
+              md:"2px"
+            }}>
+              <Icon as={BsArrowUpRight} fontSize={{
+                base:"10px",
+                md:"12px"
+              }} color="#059669" />
+              <Text fontSize={{
+                base:"12px",
+                md:"14px"
+              }} color="#059669" fontWeight="bold">
                 0.04%
               </Text>
             </HStack>
@@ -59,23 +71,23 @@ const PriceSection = () => {
         {["1H", "1D", "1W", "1M"].map((a,i) => <Tab key={i} color="black.25" p="6px" borderRadius="4px" fontSize="12px"  _selected={{ color: 'p.black', bg: 'white' }}>{a}</Tab>)}
         </TabList>
       </Flex>
-        <TabPanels>
-          <TabPanel>
-            <Image w="400px" src="/graph_1.png"/>
+        <TabPanels >
+          <TabPanel p="5px">
+            <Image  src="/graph_1.png"/>
           </TabPanel>
           <TabPanel>
-            <Image w="400px" src="/graph_2.png"/>
+            <Image  src="/graph_2.png"/>
           </TabPanel>
           <TabPanel>
-            <Image w="400px" src="/graph_3.png"/>
+            <Image src="/graph_3.png"/>
           </TabPanel>
           <TabPanel>
-            <Image w="400px" src="/graph_4.png"/>
+            <Image src="/graph_4.png"/>
           </TabPanel>
           
         </TabPanels>
       </Tabs> 
-      <HStack justify="space-around" fontSize="12px" color="black.25" mt="5px">
+      <HStack p="5px" justifyContent="space-between" fontSize="12px" color="black.25" mt="5px">
           {timestamps.map((time)=><Text>{time}</Text>)}
           </HStack>
       </Stack>

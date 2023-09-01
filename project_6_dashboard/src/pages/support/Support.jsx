@@ -9,7 +9,7 @@ import { BsFillChatFill } from "react-icons/bs";
 const Support = () => {
   return (
     <DashboardLayout title="Support">
-      <Stack gap="80px">
+      <Stack gap="40px">
         <SupportContainer
           icon={AiFillMail}
           title="Contact Us"

@@ -11,7 +11,7 @@ const SideDrawer = ({ isOpen, onClose }) => {
   return (
     <>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
-        <DrawerOverlay minH="100%" maxW="full"/>
+        <DrawerOverlay minH="100%" maxW="full" w="full"/>
         <DrawerContent maxW="256px" minH="100%">
           <DrawerCloseButton />
           <DrawerBody p={0}>

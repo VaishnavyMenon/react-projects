@@ -1,4 +1,4 @@
-import { Box, Grid, HStack, Icon, Stack, Text, Button } from "@chakra-ui/react";
+import { Box, Grid, HStack, Icon, Stack, Text, Button, Divider } from "@chakra-ui/react";
 import { TbCoinRupee } from "react-icons/tb";
 import { TbCoinBitcoin } from "react-icons/tb";
 
@@ -30,7 +30,7 @@ const TransactionsSection = () => {
       <Stack gap="16px">
       {transactions.map((rec, index) => (
         <Stack gap="16px" key={index}>
-          <HStack gap="16px">
+          <HStack gap="16px" justifyContent="space-between">
             <Grid
               h="40px"
               w="40px"
@@ -40,7 +40,7 @@ const TransactionsSection = () => {
             >
               <Icon fontSize="20px" as={rec.icon} />
             </Grid>
-            <HStack justify="space-between" w="100%">
+            <HStack justify="space-between" w="full">
               <Stack gap="4px">
                 <Text textStyle="h3">{rec.text}</Text>
                 <Text fontSize="14px" color="black.25">
@@ -57,7 +57,7 @@ const TransactionsSection = () => {
             </HStack>
           </HStack>
           {transactions.length - 1 !== index && <Stack alignItems="end">
-          <Box h="0.5px" w="364px" bg="black.10" align="right"></Box>
+          <Divider />
         </Stack>}
           
         </Stack>

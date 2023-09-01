@@ -1,4 +1,4 @@
-import { Button, Card, Checkbox, Flex, FormLabel, HStack, Input, Stack, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Card, Checkbox, Flex, FormLabel, HStack, Input, Stack, Text, Textarea } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const ContactSection = () => {
@@ -7,10 +7,11 @@ const ContactSection = () => {
     const [email, setEmail]=useState("")
     const [text, setText]=useState("")
     const [proceed, setProceed] = useState(true)
+    const [checked, setChecked] = useState(false)
 
     useEffect(()=>{
         setProceed(true)
-        name && surname && email && setProceed(false)
+        name && surname && email && checked && setProceed(false)
     })
     
   return (
@@ -50,7 +51,7 @@ const ContactSection = () => {
           <Textarea fontSize="12px" placeholder="Message" py="10px" onChange={(e)=>setText(e.target.value)}/>
         </Stack>
       </Flex>
-      <Checkbox colorScheme="purple"><Text fontSize="12px">I agree with Terms & Conditions.</Text></Checkbox>
+      <Checkbox colorScheme="purple" isChecked={checked} onChange={(e)=>setChecked(e.target.checked)}><Text fontSize="12px">I agree with <Box as="span" color="p.purple">Terms & Conditions.</Box> </Text></Checkbox>
       <Stack >
         <Button w="100%" isDisabled={proceed} fontSize="14px" bg="p.purple" color="white">Send a Message</Button>
         <Button w="100%" fontSize="14px">Book a Meeting</Button>

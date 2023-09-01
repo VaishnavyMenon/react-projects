@@ -17,7 +17,7 @@ const SideNav = () => {
     }
   ]
   return (
-    <Stack h="100vh" position="fixed" pt="54px" justify="space-between" fontWeight="bold" zIndex={1} bg="#ffffff" minW={{
+    <Stack h="full" position="fixed" pt="54px" justify="space-between" fontWeight="bold" zIndex={1} bg="#ffffff" minW={{
       base:"full",
       lg: "256px"
     }}>
@@ -44,7 +44,7 @@ const SideNav = () => {
           color: "#171717",
           borderRadius: "10px",
           cursor: "pointer"
-        }}>
+        }} _selected={{color:"red"}}>
         <Icon as={BiSupport} fontSize="18px" color/>
         <Text fontSize="16px" >Support</Text>
         </HStack>

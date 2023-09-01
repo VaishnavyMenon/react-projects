@@ -5,6 +5,9 @@ import {
   HStack,
   Icon,
   Input,
+  InputGroup,
+  InputLeftElement,
+  Show,
   Stack,
   Tab,
   TabList,
@@ -147,7 +150,7 @@ const Transaction = () => {
 
   return (
     <DashboardLayout title="Transactions">
-      <Stack gap="12px" >
+      <Stack gap="12px">
         <Flex justifyContent="end">
           <Button
             leftIcon={<HiDownload fontSize="18px" />}
@@ -171,91 +174,125 @@ const Transaction = () => {
           </Button>
         </Flex>
         <Stack bg="white" borderRadius="16px" align="top" pt="14px">
-            <Tabs>
-              <TabList>
-                <HStack
-                  alignItems="start"
-                  px="16px"
-                  flex="1"
-                  justifyContent="space-between"
-                >
-                  <HStack>
-                    {tabs.map((tab) => (
-                      <Tab pb="25px" fontSize="14px" mt="0px">
-                        {tab.name}{" "}
-                        <Tag
-                          borderRadius="100px"
-                          fontSize="12px"
-                          ml="8px"
-                          px="6px"
-                          py="4px"
-                          color="black.25"
-                        >
-                          {tab.tag}
-                        </Tag>
-                      </Tab>
-                    ))}
-                  </HStack>
-                  <HStack pt="8px">
-                    <Icon
-                      as={AiOutlineSearch}
+          <Tabs>
+            <TabList>
+              <HStack
+                alignItems="start"
+                px="16px"
+                flex="1"
+                justifyContent="space-between"
+              >
+                <HStack>
+                  {tabs.map((tab) => (
+                    <Tab pb="25px" fontSize="14px" mt="0px">
+                      {tab.name}{" "}
+                      <Show above="md">
+                      <Tag
+                      borderRadius="100px"
+                      fontSize="12px"
+                      ml="8px"
+                      px="6px"
+                      py="4px"
                       color="black.25"
-                      fontSize="20px"
-                    />
-                    <Input
-                      placeholder="Search by ID or destination"
-                      border="none"
-                      color="black.25"
-                      px="8px"
-                      fontSize="14px"
-                      variant="unstyled"
-                      onChange={filterContent}
-                    />
-                    </HStack>
+                      >
+                      {tab.tag}
+                      </Tag>
+                      </Show>
+                    </Tab>
+                  ))}
                 </HStack>
-              </TabList>
+                <Show above="md">
+                  <HStack pt="8px">
+                    <InputGroup>
+                      <InputLeftElement pointerEvents="none">
+                        <AiOutlineSearch color="gray" fontSize="20px" />
+                      </InputLeftElement>
+                      <Input
+                        placeholder="Search by ID or destination"
+                        border="none"
+                        color="black.25"
+                        px="8px"
+                        fontSize="14px"
+                        onChange={filterContent}
+                      />
+                    </InputGroup>
+                  </HStack>
+                </Show>
+              </HStack>
+            </TabList>
 
-              <TabPanels>
-                {[1, 2, 3, 4].map((a) => (
-                  <TabPanel>
-                    <TableContainer>
-                      <Table variant="simple">
-                        <Thead mx="0px">
-                          <Tr>
-                            <Th fontSize="12px" color="black.25">
-                              ID
-                            </Th>
-                            <Th
-                              fontSize="12px"
-                              color="black.25"
-                            >
-                              <HStack alignItems="center"
-                              gap="3px">
+            <TabPanels>
+              {[1, 2, 3, 4].map((a) => (
+                <TabPanel>
+                  <TableContainer>
+                    <Table variant="simple">
+                      <Thead mx="0px">
+                        <Tr>
+                          <Th fontSize="12px" color="black.25" p={{
+                            base:"12px",
+                            md:"auto"
+                          }}>
+                            ID
+                          </Th>
+                          <Show above="md">
+                            <Th fontSize="12px" color="black.25" >
+                              <HStack alignItems="center" gap="3px">
                                 <Text>Date & Time</Text>
-                                <Icon as={IoMdArrowDropdown} fontSize="16px"  onClick={sortedArray}/>
+                                <Icon
+                                  as={IoMdArrowDropdown}
+                                  fontSize="16px"
+                                  onClick={sortedArray}
+                                />
                               </HStack>
                             </Th>
                             <Th fontSize="12px" color="black.25">
                               Type
                             </Th>
-                            <Th fontSize="12px" color="black.25">
-                              Amount
-                            </Th>
-                            <Th fontSize="12px" color="black.25">
-                              Status
-                            </Th>
-                          </Tr>
-                        </Thead>
-                        <Tbody px="24px" py="16px">
-                          {data?.map((record) => (
-                            <Tr>
-                              <Td textStyle="h4">{record.id}</Td>
+                          </Show>
+                          <Th fontSize="12px" color="black.25" p={{
+                            base:"15px",
+                            md:"auto"
+                          }}>
+                            Amount
+                          </Th>
+                          <Th fontSize="12px" color="black.25" p={{
+                            base:"15px",
+                            md:"auto"
+                          }}>
+                            Status
+                          </Th>
+                        </Tr>
+                      </Thead>
+                      <Tbody px="24px" py="16px">
+                        {data?.map((record) => (
+                          <Tr>
+                          <Td textStyle="h4" p={{
+                            base:"12px",
+                            md:"auto"
+                          }}>
+                          {record.id}
+                          <Show below="md">
+                                <Text
+                                  textStyle={{
+                                    base: "h6",
+                                    md: "h4",
+                                  }}
+                                >
+                                  {record.date}
+                                </Text>
+                                <Text textStyle="h6">{record.time}</Text>
+                              </Show>
+                            </Td>
+
+                            <Show above="md">
                               <Td>
                                 <Stack gap="2px">
                                   <Text textStyle="h4">{record.date}</Text>
                                   <Text textStyle="h6">{record.time}</Text>
                                 </Stack>
                               </Td>
+                            </Show>
+                            <Show above="md">
                               <Td>
                                 <Stack gap="2px">
                                   <Text textStyle="h4">{record.type}</Text>
@@ -264,38 +301,43 @@ const Transaction = () => {
                                   )}
                                 </Stack>
                               </Td>
-                              <Td>
-                                <Stack gap="2px">
-                                  <Text textStyle="h4">{record.amount}</Text>
-                                  {record.subamount && (
-                                    <Text textStyle="h6">
-                                      {record.subamount}
-                                    </Text>
-                                  )}
-                                </Stack>
-                              </Td>
-                              <Td>
-                                <Tag
-                                  h="22px"
-                                  px="8px"
-                                  py="4px"
-                                  fontSize="12px"
-                                  color="white"
-                                  bg={colors[record.status]}
-                                  borderRadius="100px"
-                                >
-                                  {record.status}
-                                </Tag>
-                              </Td>
-                            </Tr>
-                          ))}
-                        </Tbody>
-                      </Table>
-                    </TableContainer>
-                  </TabPanel>
-                ))}
-              </TabPanels>
-            </Tabs>
+                            </Show>
+                            <Td p={{
+                              base:"15px",
+                              md:"auto"
+                            }}>
+                              <Stack gap="2px">
+                                <Text textStyle="h4">{record.amount}</Text>
+                                {record.subamount && (
+                                  <Text textStyle="h6">{record.subamount}</Text>
+                                )}
+                              </Stack>
+                            </Td>
+                            <Td p={{
+                              base:"15px",
+                              md:"auto"
+                            }}>
+                              <Tag
+                                h="22px"
+                                px="8px"
+                                py="4px"
+                                fontSize="12px"
+                                color="white"
+                                bg={colors[record.status]}
+                                borderRadius="100px"
+                              >
+                                {record.status}
+                              </Tag>
+                            </Td>
+                          </Tr>
+                        ))}
+                      </Tbody>
+                    </Table>
+                  </TableContainer>
+                </TabPanel>
+              ))}
+            </TabPanels>
+          </Tabs>
         </Stack>
       </Stack>
     </DashboardLayout>

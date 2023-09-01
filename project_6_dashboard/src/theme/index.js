@@ -32,7 +32,7 @@ export const theme = extendTheme({
   textStyles: {
     h1: {
       fontSize: {
-        base: "22px",
+        base: "18px",
         md: "24px",
       },
       color: "p.black",
@@ -40,7 +40,7 @@ export const theme = extendTheme({
     },
     h2: {
       fontSize: {
-        base: "20px",
+        base: "16px",
         md: "22px",
       },
       color: "p.black",
@@ -63,7 +63,7 @@ export const theme = extendTheme({
     },
     h5: {
       fontSize: {
-        base: "12px",
+        base: "14px",
         md: "14px",
       },
       color: "black.30",
@@ -75,6 +75,14 @@ export const theme = extendTheme({
       },
       color: "black.25",
     },
+    h7:{
+      fontSize: {
+        base: "28px",
+        md: "32px",
+      },
+      color: "p.black",
+      fontWeight:"bold"
+    }
   },
   components: {
     Button: {
@@ -84,6 +92,26 @@ export const theme = extendTheme({
         w: "80px",
         
       },
+    },
+    Input:{
+      variants:{
+        outline:{
+          field:{
+            _focus:{
+              boxShadow:"0 0 0 1px #5F00D9",
+            },
+          },
+        },
+      }
+    },
+    Textarea:{
+      variants:{
+        outline:{
+            _focus:{
+              boxShadow:"0 0 0 1px #5F00D9",
+            },
+          },
+      }
     },
   },
 });

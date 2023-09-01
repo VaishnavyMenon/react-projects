@@ -30,7 +30,7 @@ const Dashboard = () => {
       </GridItem>
       <GridItem colSpan={1}>
         <InfoSection tag="Contact" text="Learn more about our real estate, mortgage, and  corporate account services" pColor="p.purple" sColor="white" tColor="white" bgImage="/bg_2.png"/>
-      </GridItem>
+  </GridItem>
     </Grid>
     </DashboardLayout>
   )

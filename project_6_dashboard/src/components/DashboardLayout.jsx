@@ -23,7 +23,7 @@ const { isOpen, onOpen, onClose } = useDisclosure()
         }}>
           <TopNav title={title} onOpen={onOpen} />
           <Container mt="24px" mb="30px" maxW="1000px" minW="fit-content" overflowY="auto" h={{
-            base: "100vh",
+            base: "85vh",
             md:"calc(100vh - 129px)",
           }}>{children}</Container>
         </Box>
