@@ -46,4 +46,6 @@ series of React practice projects
 
    ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/f2cf4315-d71e-4d22-a462-4289e26ec4d2)
 
-   ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/d90619cd-4c2d-436a-93cd-85c6dd1ebfc4)
+   <img width="2388" alt="Frame 2" src="https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/98e8d987-91cd-4b06-8236-1ade9c428ee1">
+
+   
