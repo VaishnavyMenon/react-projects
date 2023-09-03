@@ -31,7 +31,19 @@ series of React practice projects
 
 5. Contact App
    -- CRUD app to add, delete and update contacts
+   -- https://vite-contact-app-e1f7e.web.app/
 
    ![TV - 1](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/0afd85bb-8f07-4508-b7d5-efc6cf40362c)
 
    
+7. Dashboard
+   -- dashboard app showing analytics, transactions etc.
+   -- https://dashboard-13320.web.app/
+   
+   ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/3314fe50-faeb-46fe-b5a1-2ba8f4f9fbb6)
+
+   ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/1215ae55-4d02-4868-887e-ccf432e60b11)
+
+   ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/f2cf4315-d71e-4d22-a462-4289e26ec4d2)
+
+   ![image](https://github.com/VaishnavyMenon/react_mini_projects/assets/74608354/d90619cd-4c2d-436a-93cd-85c6dd1ebfc4)
