@@ -72,8 +72,8 @@ const PriceSection = () => {
         </TabList>
       </Flex>
         <TabPanels >
-          <TabPanel p="5px">
-            <Image  src="/graph_1.png"/>
+          <TabPanel>
+            <Image  src="/graph_4.png"/>
           </TabPanel>
           <TabPanel>
             <Image  src="/graph_2.png"/>

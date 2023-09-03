@@ -20,7 +20,7 @@ const TopNav = ( {title, onOpen} ) => {
           lg:"none"
       }}/>
       <HStack w="100%" maxW="1000px" justify="space-between" py="15px" mx="auto" px="18px" >
-        <Heading as="h1" fontSize="28px">
+        <Heading as="h1" fontSize="28px" fontWeight="700">
           {title}
         </Heading>
         <Menu>

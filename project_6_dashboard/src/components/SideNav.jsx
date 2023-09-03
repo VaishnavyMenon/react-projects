@@ -18,12 +18,12 @@ const SideNav = ({active}) => {
     }
   ]
   return (
-    <Stack h="full" position="fixed" pt="54px" justify="space-between" fontWeight="bold" zIndex={1} bg="#ffffff" minW={{
+    <Stack h="full" position="fixed" pt="54px" justify="space-between" fontWeight="medium" zIndex={1} bg="#ffffff" minW={{
       base:"full",
       lg: "256px"
     }}>
       <Box>
-        <Heading as="h1" fontSize="24px" fontWeight="bold" color="#5F00D9" pb="24px" pl="28px">Dashboard.</Heading>
+        <Heading as="h1" fontSize="24px" fontWeight="medium" color="#5F00D9" pb="24px" pl="28px">Dashboard.</Heading>
         {navLinks.map((el) => 
           <a href={el.link} key={el.text}>
           <HStack gap="3" py="14px" mx="12px" pl="4" bg={active===el.text? "black.5" : "auto"} color={active===el.text? "#171717" : "black.25"} borderRadius={active===el.text? "10px" : "auto"} _hover={{

@@ -1,4 +1,4 @@
-import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
   purple: {
@@ -36,7 +36,7 @@ export const theme = extendTheme({
         md: "24px",
       },
       color: "p.black",
-      fontWeight: "bold",
+      fontWeight: "medium",
     },
     h2: {
       fontSize: {
@@ -44,7 +44,7 @@ export const theme = extendTheme({
         md: "22px",
       },
       color: "p.black",
-      fontWeight: "bold",
+      fontWeight: "medium",
     },
     h3: {
       fontSize: {
@@ -59,7 +59,7 @@ export const theme = extendTheme({
         md: "14px",
       },
       color: "p.black",
-      fontWeight:"bold"
+      fontWeight:"medium"
     },
     h5: {
       fontSize: {
