@@ -87,11 +87,11 @@ const App = () => {
   return (
     <>
       <div
-        className={`min-h-[100vh] max-h-[130vh] mx-auto ${
+        className={`min-h-[104.7vh] h-[140vh] overflow-hidden mx-auto ${
           theme ? "bg-[#ffffff]" : "bg-[#1C1C1C]"
         }`}
       >
-        <div className=" px-9 pt-[62px] ">
+        <div className=" px-9 pt-[62px] overflow-hidden">
           <NavBar onOpen={onOpen} theme={theme} handleSearch={handleSearch} setUpdate={setUpdate} />
           <ContactList
             theme={theme}

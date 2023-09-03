@@ -1,9 +1,10 @@
-import { Box, Container, Flex, useDisclosure } from "@chakra-ui/react";
+import { Box, Container, Flex, useDisclosure, useEditable } from "@chakra-ui/react";
 import SideNav from "./SideNav";
 import TopNav from "./TopNav";
 import SideDrawer from "./SideDrawer";
 
 const DashboardLayout = ({ title, children }) => {
+  
 const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Box>
@@ -13,7 +14,7 @@ const { isOpen, onOpen, onClose } = useDisclosure()
         md:"none",
         lg:"block"
     }}>
-        <SideNav/>
+        <SideNav active={title}/>
       </Box>
         <SideDrawer isOpen={isOpen} onClose={onClose} />
         <Box flexGrow={1} ml={{

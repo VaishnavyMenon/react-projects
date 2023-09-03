@@ -3,7 +3,8 @@ import {RxDashboard} from 'react-icons/rx'
 import {GoArrowSwitch} from 'react-icons/go'
 import {BiSupport} from 'react-icons/bi'
 
-const SideNav = () => {
+const SideNav = ({active}) => {
+  console.log(active,"active")
   const navLinks = [
     {
       icon: RxDashboard,
@@ -25,7 +26,7 @@ const SideNav = () => {
         <Heading as="h1" fontSize="24px" fontWeight="bold" color="#5F00D9" pb="24px" pl="28px">Dashboard.</Heading>
         {navLinks.map((el) => 
           <a href={el.link} key={el.text}>
-          <HStack gap="3" py="14px" mx="12px" pl="4" color="black.25"  _hover={{
+          <HStack gap="3" py="14px" mx="12px" pl="4" bg={active===el.text? "black.5" : "auto"} color={active===el.text? "#171717" : "black.25"} borderRadius={active===el.text? "10px" : "auto"} _hover={{
             bg: "black.5",
             color: "#171717",
             borderRadius: "10px",
@@ -39,14 +40,14 @@ const SideNav = () => {
       </Box>
       <Box>
       <a href={`/support`}>
-      <HStack gap="3" mb="20px" py="14px" mx="12px" pl="4" color="black.25" _hover={{
+      <HStack gap="3" mb="20px" py="14px" mx="12px" pl="4" bg={active==="Support"? "black.5" : "auto"} color={active==="Support"? "#171717" : "black.25"} borderRadius={active==="Support"? "10px" : "auto"} _hover={{
         bg: "black.5",
           color: "#171717",
           borderRadius: "10px",
           cursor: "pointer"
         }} _selected={{color:"red"}}>
         <Icon as={BiSupport} fontSize="18px" color/>
-        <Text fontSize="16px" >Support</Text>
+        <Text fontSize="16px">Support</Text>
         </HStack>
         </a>
       </Box>

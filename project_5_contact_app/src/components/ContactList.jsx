@@ -4,12 +4,14 @@ import EmptyState from "./EmptyState";
 const ContactList = ({ handleOption, theme, contacts, setUpdate, onOpen }) => {
   const isEmpty = contacts? contacts.length===0? 1 : 0 : 1
   return (
-    <div className="mt-[35px] overflow-scroll max-h-[calc(100vh-250px)] overflow-x-hidden">
-    {isEmpty? (<EmptyState theme={theme} setUpdate={setUpdate} onOpen={onOpen}/>):   
+    <div className="mt-[158px] overflow-scroll max-h-[65%] overflow-x-hidden fixed">
+    
+      {isEmpty? ( <div className="w-[332px]" ><EmptyState theme={theme} setUpdate={setUpdate} onOpen={onOpen}/> </div>):   
+    
     (contacts?.map(({ name, email, phone, id }) => (
         <div
           key={id}
-          className={`flex gap-[80px] items-center w-[320px] border-b-2 ${
+          className={`flex gap-[40px] justify-between items-center w-[330px] border-b-2 ${
             theme ? "border-[#f0f0f0]" : "border-[#363636]"
           }`}
         >

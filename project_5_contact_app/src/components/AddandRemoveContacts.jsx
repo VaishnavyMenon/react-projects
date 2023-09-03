@@ -54,7 +54,7 @@ const AddandRemoveContacts = ({ theme, isOpen, onOpen, onClose, isUpdate, contac
             isUpdate? updateContact(values, contactDetail.id) : addContact(values);
           }}
         >
-          <Form className={`mx-[28px] flex flex-col gap-[12px]`}>
+          <Form className={`mx-[30px] flex flex-col gap-[12px]`}>
             {fields?.map((field, i) => (
               <div className={`flex flex-col gap-1`} key={i}>
                 <label
