@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\":\"test@dosomecoding.com\",\n    \"password\":\"anshuraj\"\n}",
+					"raw": "{\n    \"email\":\"test@dosomecoding.com\",\n    \"password\":\"anshuraj\"\n,  \"firstname\":\"Anshu\"\n, \"lastname\":\"Raj\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -49,13 +49,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/user/signin",
+					"raw": "{{url}}/user/signup",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"user",
-						"signin"
+						"signup"
 					]
 				}
 			},
@@ -68,7 +68,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\":\"test@dosomecoding.com\",\n    \"password\":\"anshuraj\"\n}",
+					"raw": "{\n    \"email\":\"test@dosomecoding.com\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,13 +76,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/user/signin",
+					"raw": "{{url}}/user/send-verification-mail",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"user",
-						"signin"
+						"send-verification-mail"
 					]
 				}
 			},

@@ -4,8 +4,15 @@ import PortfolioSection from './PortfolioSection'
 import PriceSection from './PriceSection'
 import TransactionsSection from './TransactionsSection'
 import InfoSection from './InfoSection'
+import { fetchExample } from '../../api/query/exampleQuery'
+import { useQuery } from 'react-query'
 
 const Dashboard = () => {
+  const exampleQuery = useQuery({
+    queryKey:["example"],
+    queryFn: fetchExample,
+  })
+
   return (
     <DashboardLayout title="Dashboard">
     <Grid gridTemplateColumns={{

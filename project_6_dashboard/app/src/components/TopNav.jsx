@@ -10,8 +10,11 @@ import {
 } from "@chakra-ui/react";
 import { BiUserCircle } from "react-icons/bi";
 import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const TopNav = ( {title, onOpen} ) => {
+  const {logout} = useAuth()
   return (
     <Box h="75px" w="100%" alignItems="center" bg="white">
     <HStack>
@@ -32,8 +35,8 @@ const TopNav = ( {title, onOpen} ) => {
             />
           </MenuButton>
           <MenuList>
-            <MenuItem>Logout</MenuItem>
-            <a href={`/support`}><MenuItem>Support</MenuItem></a>
+            <MenuItem onClick={logout}>Logout</MenuItem>
+            <Link to="/support"><MenuItem>Support</MenuItem></Link>
           </MenuList>
         </Menu>
       </HStack>

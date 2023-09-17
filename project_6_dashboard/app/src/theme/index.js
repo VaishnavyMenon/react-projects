@@ -82,26 +82,85 @@ export const theme = extendTheme({
       },
       color: "p.black",
       fontWeight:"bold"
+    },
+    h8:{
+      fontSize: {
+        base: "20px",
+        md: "22px",
+      },
+      color: "p.black",
+      fontWeight:"500"
     }
   },
   components: {
     Button: {
       baseStyle: {
         borderRadius: "10px",
+        lineHeight:"18px",
         h: "38px",
         w: "80px",
         
       },
+      variants:{
+        'form-btn':{
+          w:"100%",
+          fontSize:"14px",
+          fontWeight:"500",
+          h:"38px",
+          color:"white",
+          bg:"p.purple",
+          _hover:{
+            color:"p.purple",
+            bg:"white",
+            border:"2px",
+            bg:"transparent",
+            borderColor:"p.purple"
+          }
+        },
+        'form-btn-outline':{
+          w:"100%",
+          fontSize:"14px",
+          fontWeight:"500",
+          h:"38px",
+          color:"p.purple",
+          bg:"white",
+          border:"2px",
+          bg:"transparent",
+          borderColor:"p.purple",
+          _hover:{
+            bg:"p.purple",
+            color:"white"
+          }
+        },
+      }
     },
-    Input:{
+    Text: {
+      variants:{
+        'form-label': {
+          textStyle:"h6",
+          color:"p.black",
+          fontWeight:"500",
+          lineHeight:"14px"
+        },
+      },
+    },
+    Input: {
+      baseStyle:{
+        h:"50px"
+      },
       variants:{
         outline:{
           field:{
+            h:"38px",
+            w:"100%",
+            py:"10px",
+            px:"12px",
             _focus:{
               boxShadow:"0 0 0 1px #5F00D9",
             },
           },
         },
+        
       }
     },
     Textarea:{
@@ -113,5 +172,14 @@ export const theme = extendTheme({
           },
       }
     },
+    InputForm:{
+      baseStyle:{
+        fontSize:"14px",
+          w:"100%",
+          h:"38px",
+          py:"10px",
+          px:"12px"
+      }
+    }
   },
 });

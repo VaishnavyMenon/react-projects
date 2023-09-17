@@ -40,7 +40,7 @@ export const signinUser: RequestHandler = async (req, res, next) => {
     const isValidPassword = await bcrypt.compare(password, user.password);
 
     if (!isValidPassword)
-      return next(createHttpError(401, "Not Valid Password!"));
+      return next(createHttpError(401, "Invalid Password!"));
 
     const token = jwt.sign(
       {
@@ -67,7 +67,7 @@ export const sendVerificationMail: RequestHandler = async (req, res, next) => {
   const { email }: { email: string } = req.body;
   try {
     const user = await User.findOne({ email });
-    if (!user) return next(createHttpError(404, "Email Not Valid!"));
+    if (!user) return next(createHttpError(404, "Invalid Email!"));
 
     if (user.isUserVerified)
       return next(createHttpError(406, "User already verified"));
@@ -126,7 +126,7 @@ export const sendForgotPasswordMail: RequestHandler = async (
   const { email }: { email: string } = req.body;
   try {
     const user = await User.findOne({ email });
-    if (!user) return next(createHttpError(404, "Email Not Valid!"));
+    if (!user) return next(createHttpError(404, "Invalid Email!"));
 
     const encryptedToken = await bcrypt.hash(user._id.toString(), 8);
 

@@ -125,7 +125,7 @@ var signinUser = function (req, res, next) { return __awaiter(void 0, void 0, vo
             case 3:
                 isValidPassword = _b.sent();
                 if (!isValidPassword)
-                    return [2 /*return*/, next((0, http_errors_1.default)(401, "Not Valid Password!"))];
+                    return [2 /*return*/, next((0, http_errors_1.default)(401, "Invalid Password!"))];
                 token = jsonwebtoken_1.default.sign({
                     firstName: user.firstName,
                     lastName: user.lastName,
@@ -158,7 +158,7 @@ var sendVerificationMail = function (req, res, next) { return __awaiter(void 0, 
             case 2:
                 user = _a.sent();
                 if (!user)
-                    return [2 /*return*/, next((0, http_errors_1.default)(404, "Email Not Valid!"))];
+                    return [2 /*return*/, next((0, http_errors_1.default)(404, "Invalid Email!"))];
                 if (user.isUserVerified)
                     return [2 /*return*/, next((0, http_errors_1.default)(406, "User already verified"))];
                 return [4 /*yield*/, bcrypt_1.default.hash(user._id.toString(), 8)];
@@ -238,7 +238,7 @@ var sendForgotPasswordMail = function (req, res, next) { return __awaiter(void 0
             case 2:
                 user = _a.sent();
                 if (!user)
-                    return [2 /*return*/, next((0, http_errors_1.default)(404, "Email Not Valid!"))];
+                    return [2 /*return*/, next((0, http_errors_1.default)(404, "Invalid Email!"))];
                 return [4 /*yield*/, bcrypt_1.default.hash(user._id.toString(), 8)];
             case 3:
                 encryptedToken = _a.sent();
