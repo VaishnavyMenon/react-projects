@@ -5,7 +5,6 @@ import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
   const { token } = useAuth();
-  console.log(token? "true" : "false", "token")
   return <> {token ? children : <Navigate to="/signin" />} </>;
 };
 

@@ -37,25 +37,24 @@ const signupValidationSchema = object({
 
 const SignUp = () => {
   const [email, setEmail] = useState();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const toast = useToast();
 
   const { mutate, isLoading } = useMutation({
     mutationKey: ["signup"],
     mutationFn: signupUser,
     onSettled: async (data) => {
-      if(email){
-        navigate(`/email-verification/${email}`)
-    }
+      if (email) {
+        navigate(`/email-verification/${email}`);
+      }
     },
     onError: (error) => {
       toast({
-        title:"Signup Error",
+        title: "Signup Error",
         description: error.message,
         status: "error",
-      })
+      });
     },
-    
   });
 
   return (
@@ -86,9 +85,7 @@ const SignUp = () => {
             confirmpassword: "",
             checkbox: false,
           }}
-        
           onSubmit={(values) => {
-            // setEmail((prev) => (prev = values.email))
             mutate({
               email: values.email,
               password: values.password,

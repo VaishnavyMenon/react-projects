@@ -39,11 +39,7 @@ const SuccessPopup = ({
       <Box w="100%">
         {button && (
           <Link to={link}>
-            <Button
-              variant={buttonvariant}
-            >
-              {button}
-            </Button>
+            <Button variant={buttonvariant}>{button}</Button>
           </Link>
         )}
       </Box>

@@ -28,8 +28,8 @@ const router = createBrowserRouter([
     path: "/transaction",
     element: (
       <ProtectedRoute>
-      <Transaction />
-    </ProtectedRoute>
+        <Transaction />
+      </ProtectedRoute>
     ),
   },
   {

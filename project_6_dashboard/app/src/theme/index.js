@@ -59,7 +59,7 @@ export const theme = extendTheme({
         md: "14px",
       },
       color: "p.black",
-      fontWeight:"medium"
+      fontWeight: "medium",
     },
     h5: {
       fontSize: {
@@ -75,111 +75,109 @@ export const theme = extendTheme({
       },
       color: "black.25",
     },
-    h7:{
+    h7: {
       fontSize: {
         base: "28px",
         md: "32px",
       },
       color: "p.black",
-      fontWeight:"bold"
+      fontWeight: "bold",
     },
-    h8:{
+    h8: {
       fontSize: {
         base: "20px",
         md: "22px",
       },
       color: "p.black",
-      fontWeight:"500"
-    }
+      fontWeight: "500",
+    },
   },
   components: {
     Button: {
       baseStyle: {
         borderRadius: "10px",
-        lineHeight:"18px",
+        lineHeight: "18px",
         h: "38px",
         w: "80px",
-        
       },
-      variants:{
-        'form-btn':{
-          w:"100%",
-          fontSize:"14px",
-          fontWeight:"500",
-          h:"38px",
-          color:"white",
-          bg:"p.purple",
-          _hover:{
-            color:"p.purple",
-            bg:"white",
-            border:"2px",
-            bg:"transparent",
-            borderColor:"p.purple"
-          }
+      variants: {
+        "form-btn": {
+          w: "100%",
+          fontSize: "14px",
+          fontWeight: "500",
+          h: "38px",
+          color: "white",
+          bg: "p.purple",
+          _hover: {
+            color: "p.purple",
+            bg: "white",
+            border: "2px",
+            bg: "transparent",
+            borderColor: "p.purple",
+          },
         },
-        'form-btn-outline':{
-          w:"100%",
-          fontSize:"14px",
-          fontWeight:"500",
-          h:"38px",
-          color:"p.purple",
-          bg:"white",
-          border:"2px",
-          bg:"transparent",
-          borderColor:"p.purple",
-          _hover:{
-            bg:"p.purple",
-            color:"white"
-          }
+        "form-btn-outline": {
+          w: "100%",
+          fontSize: "14px",
+          fontWeight: "500",
+          h: "38px",
+          color: "p.purple",
+          bg: "white",
+          border: "2px",
+          bg: "transparent",
+          borderColor: "p.purple",
+          _hover: {
+            bg: "p.purple",
+            color: "white",
+          },
         },
-      }
+      },
     },
     Text: {
-      variants:{
-        'form-label': {
-          textStyle:"h6",
-          color:"p.black",
-          fontWeight:"500",
-          lineHeight:"14px"
+      variants: {
+        "form-label": {
+          textStyle: "h6",
+          color: "p.black",
+          fontWeight: "500",
+          lineHeight: "14px",
         },
       },
     },
     Input: {
-      baseStyle:{
-        h:"50px"
+      baseStyle: {
+        h: "50px",
       },
-      variants:{
-        outline:{
-          field:{
-            h:"38px",
-            w:"100%",
-            py:"10px",
-            px:"12px",
-            _focus:{
-              boxShadow:"0 0 0 1px #5F00D9",
+      variants: {
+        outline: {
+          field: {
+            h: "38px",
+            w: "100%",
+            py: "10px",
+            px: "12px",
+            _focus: {
+              boxShadow: "0 0 0 1px #5F00D9",
             },
           },
         },
-        
-      }
+      },
     },
-    Textarea:{
-      variants:{
-        outline:{
-            _focus:{
-              boxShadow:"0 0 0 1px #5F00D9",
-            },
+    Textarea: {
+      variants: {
+        outline: {
+          _focus: {
+            boxShadow: "0 0 0 1px #5F00D9",
           },
-      }
+        },
+      },
     },
-    InputForm:{
-      baseStyle:{
-        fontSize:"14px",
-          w:"100%",
-          h:"38px",
-          py:"10px",
-          px:"12px"
-      }
-    }
+    InputForm: {
+      baseStyle: {
+        fontSize: "14px",
+        w: "100%",
+        h: "38px",
+        py: "10px",
+        px: "12px",
+      },
+    },
   },
 });

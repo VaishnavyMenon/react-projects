@@ -4,7 +4,6 @@ import { Navigate } from "react-router-dom";
 
 const AlreadySigninRoute = ({ children }) => {
   const { token } = useAuth();
-  console.log(token, 'nottoken')
   return <>{!token ? children : <Navigate to="/" />}</>;
 };
 
