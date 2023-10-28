@@ -1,5 +1,5 @@
 # React Project Series
-series of React practice projects
+Series of React practice projects
 
 1. Brand home page
    -- single-page project
